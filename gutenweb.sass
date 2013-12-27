@@ -14,7 +14,7 @@ $leading: 24px !default
 
 // Adjust rhythm for an element, setting its font-size and leading-units to the supplied as arguments, and adding 1 leading unit after and before
 // http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/
-=adjust-rhythm($font-size, $leading-units)
+=adjust-rhythm($font-size, $leading-units: 1)
    font-size: px-to-em($font-size)
    line-height: leading-units-to-em($leading-units, $font-size)
    margin-top: leading-units-to-em(1, $font-size)
@@ -41,16 +41,16 @@ h1
    +adjust-rhythm(36px, 2)
 
 h2 
-   +adjust-rhythm(24px, 1)
+   +adjust-rhythm(24px)
 
 h3 
-   +adjust-rhythm(21px, 1)
+   +adjust-rhythm(21px)
 
 h4 
-   +adjust-rhythm(18px, 1)
+   +adjust-rhythm(18px)
 
 .note
-   +adjust-rhythm(14px, 1)
+   +adjust-rhythm(14px)
 
 // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.6/ 
 abbr, .caps, .nums 
