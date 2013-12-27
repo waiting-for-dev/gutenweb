@@ -10,7 +10,13 @@ body {
   font-size: 1em;
   line-height: 1.5em; }
 
-address, article, aside, audio, blockquote, canvas, footer, header, hr, ol, ul, dl, p, pre, section, table, video {
+p {
+  margin-top: 1.5em; }
+
+p + p {
+  text-indent: 1.5em; }
+
+address, article, aside, audio, blockquote, canvas, footer, header, hr, ol, ul, dl, pre, section, table, video {
   margin-top: 1.5em;
   margin-bottom: 1.5em; }
 
