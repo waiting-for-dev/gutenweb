@@ -1,4 +1,5 @@
 $leading: 24px !default
+$root-fs: 16px !default
 
 // http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/
 =adjust-leading($font-size, $leading-units)
@@ -6,11 +7,14 @@ $leading: 24px !default
    line-height: ($leading-units*$leading)/$font-size
    margin-top: $leading/$font-size * 1em
    margin-bottom: $leading/$font-size * 1em
+ 
+@function leading-units-to-em($leading-units, $relative-unit: $root-fs)
+   @return ($leading-units*$leading)/$relative-unit * 1em
 
 @import 'reset.css'
 
 html, :root
-   font-size: 16px // Set document root font size
+   font-size: $root-fs // Set document root font size
 
 body
    margin: 0
@@ -18,11 +22,11 @@ body
    word-spacing: normal // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.1/ 
    text-align: left // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.3/ 
    font-size: 1em // 16px - Using inheritance, we set font size of any element to 16px. Any change in font size for other elements must be referred to this 16px 
-   line-height: $leading/16px // 24px - http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.1/ 
+   line-height: leading-units-to-em(1) // 24px - http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.1/ 
 
 address, article, aside, audio, blockquote, canvas, footer, header, hr, ol, ul, dl, p, pre, section, table, video 
-   margin-top: 1.5em // 16px - http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/ 
-   margin-bottom: 1.5em // 16px - http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/ 
+   margin-top: leading-units-to-em(1) // 16px - http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/ 
+   margin-bottom: leading-units-to-em(1) // 16px - http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/ 
 
 h1 
    +adjust-leading(36px, 2)
