@@ -18,6 +18,7 @@ p {
   margin-top: 1.5em; }
 
 p + p {
+  margin-top: 0;
   text-indent: 1.5em; }
 
 address, article, aside, audio, canvas, footer, header, hr, ol, ul, dl, pre, section, table, video {
