@@ -1,41 +1,92 @@
-/*
-Syntax error: Inconsistent indentation: 2 spaces were used for indentation, but the rest of the document was indented using 3 spaces.
-        on line 71 of gutenweb.sass
+@import url(reset.css);
+html, :root {
+  font-size: 16px; }
 
-66: h4 
-67:    +adjust-rhythm(18px)
-68: 
-69: // http://webtypography.net/Rhythm_and_Proportion/Etiquette_of_Hyphenation_and_Pagination/2.4.8/
-70: h1, h2, h3, h4, h5, h6
-71:   page-break-after: avoid
-72: 
-73: .note
-74:    +adjust-rhythm(14px)
-75: 
-76: // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.6/ 
+body {
+  margin: 0;
+  padding: 0;
+  word-spacing: normal;
+  text-align: left;
+  font-size: 1em;
+  line-height: 1.5em;
+  hyphens: auto;
+  orphans: 2;
+  widows: 2;
+  font-variant-numeric: oldstyle-nums; }
 
-Backtrace:
-gutenweb.sass:71
-/home/marc/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/engine.rb:424:in `block in tabulate'
-/home/marc/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/engine.rb:382:in `each'
-/home/marc/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/engine.rb:382:in `each_with_index'
-/home/marc/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/engine.rb:382:in `tabulate'
-/home/marc/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/engine.rb:345:in `_to_tree'
-/home/marc/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/engine.rb:315:in `_render'
-/home/marc/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/engine.rb:262:in `render'
-/home/marc/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
-/home/marc/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
-/home/marc/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:201:in `each'
-/home/marc/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
-/home/marc/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:283:in `block in watch'
-/home/marc/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/vendor/listen/lib/listen/multi_listener.rb:108:in `call'
-/home/marc/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/vendor/listen/lib/listen/multi_listener.rb:108:in `on_change'
-/home/marc/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/vendor/listen/lib/listen/multi_listener.rb:117:in `block in initialize_adapter'
-/home/marc/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/vendor/listen/lib/listen/adapters/polling.rb:56:in `call'
-/home/marc/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/vendor/listen/lib/listen/adapters/polling.rb:56:in `poll'
-/home/marc/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/vendor/listen/lib/listen/adapters/polling.rb:32:in `block in start'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Inconsistent indentation: 2 spaces were used for indentation, but the rest of the document was indented using 3 spaces.\A         on line 71 of gutenweb.sass\A \A 66: h4 \A 67:    +adjust-rhythm(18px)\A 68: \A 69: // http://webtypography.net/Rhythm_and_Proportion/Etiquette_of_Hyphenation_and_Pagination/2.4.8/\A 70: h1, h2, h3, h4, h5, h6\A 71:   page-break-after: avoid\A 72: \A 73: .note\A 74:    +adjust-rhythm(14px)\A 75: \A 76: // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.6/ "; }
+p {
+  margin-top: 1.5em; }
+
+p + p {
+  text-indent: 1.5em; }
+
+address, article, aside, audio, canvas, footer, header, hr, ol, ul, dl, pre, section, table, video {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em; }
+
+blockquote {
+  margin: 2.25em; }
+  blockquote p {
+    margin: 0;
+    text-indent: 0; }
+
+h1 {
+  font-size: 2.25em;
+  line-height: 1.33333em;
+  margin-top: 0.66667em;
+  margin-bottom: 0.66667em; }
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+h3 {
+  font-size: 1.3125em;
+  line-height: 1.14286em;
+  margin-top: 1.14286em;
+  margin-bottom: 1.14286em; }
+
+h4 {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  margin-top: 1.33333em;
+  margin-bottom: 1.33333em; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  page-break-after: avoid; }
+
+.note {
+  font-size: 0.875em;
+  line-height: 1.71429em;
+  margin-top: 1.71429em;
+  margin-bottom: 1.71429em; }
+
+abbr, .caps, .nums {
+  letter-spacing: 0.1em; }
+
+.caps {
+  font-variant-numeric: lining-nums; }
+
+.verse {
+  font-family: inherit;
+  display: table;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto; }
+
+.toc {
+  margin: 0 auto; }
+  .toc th {
+    padding: 0 0.5em 0 0;
+    text-align: right;
+    font-weight: normal; }
+  .toc td:before {
+    content: "\2022";
+    padding-right: 0.5em; }
+  .toc td {
+    padding: 0;
+    text-align: left;
+    font-style: italic; }
