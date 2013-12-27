@@ -1,3 +1,10 @@
+// http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/
+=adjust-leading($font-size, $leading-units)
+   font-size: $font-size/16px * 1em
+   line-height: ($leading-units*24px)/$font-size
+   margin-top: 24px/$font-size * 1em
+   margin-bottom: 24px/$font-size * 1em
+
 @import 'reset.css'
 
 html, :root
@@ -15,53 +22,32 @@ address, article, aside, audio, blockquote, canvas, footer, header, hr, ol, ul, 
    margin-top: 1.5em // 16px - http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/ 
    margin-bottom: 1.5em // 16px - http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/ 
 
-
 h1 
-   font-size: 2.25em // 36px - http://webtypography.net/Harmony_and_Counterpoint/Size/3.1.1/ 
-   line-height: 1.333em // 48px - http://webtypography.net/Harmony_and_Counterpoint/Size/3.1.1/ 
-   margin-top: 0.6666em // 24px - http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/ 
-   margin-bottom: 0.6666em // 24px - http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/ 
-
+   +adjust-leading(36px, 2)
 
 h2 
-   font-size: 1.5em // 24px - http://webtypography.net/Harmony_and_Counterpoint/Size/3.1.1/ 
-   line-height: 1em // 24px - http://webtypography.net/Harmony_and_Counterpoint/Size/3.1.1/ 
-   margin-top: 1em // 24px - http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/ 
-   margin-bottom: 1em // 24px - http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/ 
-
+   +adjust-leading(24px, 1)
 
 h3 
-   font-size: 1.3125em // 21px - http://webtypography.net/Harmony_and_Counterpoint/Size/3.1.1/ 
-   line-height: 1.142857em // 24px - http://webtypography.net/Harmony_and_Counterpoint/Size/3.1.1/ 
-   margin-top: 1.142857em // 24px - http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/ 
-   margin-bottom: 1.142857em // 24px - http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/ 
-
+   +adjust-leading(21px, 1)
 
 h4 
-   font-size: 1.125em // 18px - http://webtypography.net/Harmony_and_Counterpoint/Size/3.1.1/ 
-   line-height: 1.3333em // 24px - http://webtypography.net/Harmony_and_Counterpoint/Size/3.1.1/ 
-   margin-top: 1.3333em // 24px - http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/ 
-   margin-bottom: 1.3333em // 24px - http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/ 
-
+   +adjust-leading(18px, 1)
 
 abbr, .caps, .nums 
    letter-spacing: 0.1em // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.6/ 
 
-
 .toc  // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.10/ 
    margin: 0 auto
-
 
 .toc th 
    padding: 0 0.5em 0 0
    text-align: right
    font-weight: normal
 
-
 .toc td:before 
    content: "\2022"
    padding-right: 0.5em
-
 
 .toc td 
    padding: 0

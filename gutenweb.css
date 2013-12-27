@@ -16,27 +16,27 @@ address, article, aside, audio, blockquote, canvas, footer, header, hr, ol, ul, 
 
 h1 {
   font-size: 2.25em;
-  line-height: 1.333em;
-  margin-top: 0.6666em;
-  margin-bottom: 0.6666em; }
+  line-height: 1.33333;
+  margin-top: 0.66667em;
+  margin-bottom: 0.66667em; }
 
 h2 {
   font-size: 1.5em;
-  line-height: 1em;
+  line-height: 1;
   margin-top: 1em;
   margin-bottom: 1em; }
 
 h3 {
   font-size: 1.3125em;
-  line-height: 1.14286em;
+  line-height: 1.14286;
   margin-top: 1.14286em;
   margin-bottom: 1.14286em; }
 
 h4 {
   font-size: 1.125em;
-  line-height: 1.3333em;
-  margin-top: 1.3333em;
-  margin-bottom: 1.3333em; }
+  line-height: 1.33333;
+  margin-top: 1.33333em;
+  margin-bottom: 1.33333em; }
 
 abbr, .caps, .nums {
   letter-spacing: 0.1em; }
