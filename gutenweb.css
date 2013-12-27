@@ -5,10 +5,11 @@ html, :root {
 body {
   margin: 0;
   padding: 0;
-  word-spacing: normal;
-  text-align: left;
   font-size: 1em;
   line-height: 1.5em;
+  font-family: "Helvetica Neue", Arial, Freesans, clean, sans-serif;
+  text-align: left;
+  word-spacing: normal;
   hyphens: auto;
   orphans: 2;
   widows: 2;
