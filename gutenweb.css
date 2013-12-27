@@ -1,21 +1,21 @@
 /*
 Syntax error: Inconsistent indentation: 2 spaces were used for indentation, but the rest of the document was indented using 3 spaces.
-        on line 70 of gutenweb.sass
+        on line 71 of gutenweb.sass
 
-65: h4 
-66:    +adjust-rhythm(18px)
-67: 
-68: // http://webtypography.net/Rhythm_and_Proportion/Etiquette_of_Hyphenation_and_Pagination/2.4.8/
-69: h1, h2, h3, h4, h5, h6
-70:   page-break-after: avoid
-71: 
-72: .note
-73:    +adjust-rhythm(14px)
-74: 
-75: // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.6/ 
+66: h4 
+67:    +adjust-rhythm(18px)
+68: 
+69: // http://webtypography.net/Rhythm_and_Proportion/Etiquette_of_Hyphenation_and_Pagination/2.4.8/
+70: h1, h2, h3, h4, h5, h6
+71:   page-break-after: avoid
+72: 
+73: .note
+74:    +adjust-rhythm(14px)
+75: 
+76: // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.6/ 
 
 Backtrace:
-gutenweb.sass:70
+gutenweb.sass:71
 /home/marc/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/engine.rb:424:in `block in tabulate'
 /home/marc/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/engine.rb:382:in `each'
 /home/marc/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/engine.rb:382:in `each_with_index'
@@ -38,4 +38,4 @@ gutenweb.sass:70
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Inconsistent indentation: 2 spaces were used for indentation, but the rest of the document was indented using 3 spaces.\A         on line 70 of gutenweb.sass\A \A 65: h4 \A 66:    +adjust-rhythm(18px)\A 67: \A 68: // http://webtypography.net/Rhythm_and_Proportion/Etiquette_of_Hyphenation_and_Pagination/2.4.8/\A 69: h1, h2, h3, h4, h5, h6\A 70:   page-break-after: avoid\A 71: \A 72: .note\A 73:    +adjust-rhythm(14px)\A 74: \A 75: // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.6/ "; }
+  content: "Syntax error: Inconsistent indentation: 2 spaces were used for indentation, but the rest of the document was indented using 3 spaces.\A         on line 71 of gutenweb.sass\A \A 66: h4 \A 67:    +adjust-rhythm(18px)\A 68: \A 69: // http://webtypography.net/Rhythm_and_Proportion/Etiquette_of_Hyphenation_and_Pagination/2.4.8/\A 70: h1, h2, h3, h4, h5, h6\A 71:   page-break-after: avoid\A 72: \A 73: .note\A 74:    +adjust-rhythm(14px)\A 75: \A 76: // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.6/ "; }

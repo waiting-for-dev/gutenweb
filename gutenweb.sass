@@ -35,6 +35,7 @@ body
    hyphens: auto // http://webtypography.net/Rhythm_and_Proportion/Etiquette_of_Hyphenation_and_Pagination/2.4.1/
    orphans: 2 // http://webtypography.net/Rhythm_and_Proportion/Etiquette_of_Hyphenation_and_Pagination/2.4.8/
    widows: 2 // http://webtypography.net/Rhythm_and_Proportion/Etiquette_of_Hyphenation_and_Pagination/2.4.8/
+   font-variant-numeric: oldstyle-nums // http://webtypography.net/Harmony_and_Counterpoint/Numerals__Capitals_and_Small_Caps/3.2.1/
 
 p
    margin-top: leading-units-to-em(1) // 16px - http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/ 
@@ -76,6 +77,9 @@ h1, h2, h3, h4, h5, h6
 abbr, .caps, .nums 
    letter-spacing: 0.1em
 
+.caps
+   font-variant-numeric: lining-nums // http://webtypography.net/Harmony_and_Counterpoint/Numerals__Capitals_and_Small_Caps/3.2.1/
+
 // http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.4/
 .verse
    font-family: inherit
@@ -83,7 +87,6 @@ abbr, .caps, .nums
    width: auto
    margin-left: auto
    margin-right: auto
-  
 
 // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.10/ 
 .toc
