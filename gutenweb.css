@@ -59,6 +59,13 @@ h4 {
 abbr, .caps, .nums {
   letter-spacing: 0.1em; }
 
+.verse {
+  font-family: inherit;
+  display: table;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto; }
+
 .toc {
   margin: 0 auto; }
   .toc th {
