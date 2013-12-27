@@ -38,6 +38,12 @@ h4 {
   margin-top: 1.33333em;
   margin-bottom: 1.33333em; }
 
+.note {
+  font-size: 0.875em;
+  line-height: 1.71429em;
+  margin-top: 1.71429em;
+  margin-bottom: 1.71429em; }
+
 abbr, .caps, .nums {
   letter-spacing: 0.1em; }
 
