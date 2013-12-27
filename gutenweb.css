@@ -65,7 +65,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-top: 1.71429em;
-  margin-bottom: 1.71429em; }
+  margin-bottom: 1.71429em;
+  text-indent: 0; }
 
 abbr, .caps, .nums {
   letter-spacing: 0.1em; }
