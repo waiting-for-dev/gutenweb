@@ -8,10 +8,14 @@ $leading: 24px !default
 @function leading-units-to-em($leading-units, $relative-unit: $root-fs)
    @return ($leading-units*$leading)/$relative-unit * 1em
 
+// Transform from px units to em
+@function px-to-em($px, $relative-unit: $root-fs)
+   @return $px/$relative-unit * 1em
+
 // Adjust rhythm for an element, setting its font-size and leading-units to the supplied as arguments, and adding 1 leading unit after and before
 // http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/
 =adjust-rhythm($font-size, $leading-units)
-   font-size: $font-size/16px * 1em
+   font-size: px-to-em($font-size)
    line-height: leading-units-to-em($leading-units, $font-size)
    margin-top: leading-units-to-em(1, $font-size)
    margin-bottom: leading-units-to-em(1, $font-size)
