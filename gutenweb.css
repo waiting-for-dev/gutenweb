@@ -64,6 +64,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   page-break-after: avoid; }
 
+em {
+  font-style: italic; }
+
+strong {
+  font-weight: bold; }
+
 abbr, .caps, .nums {
   letter-spacing: 0.1em; }
 
