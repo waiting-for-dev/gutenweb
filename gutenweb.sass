@@ -39,9 +39,16 @@ p
 p+p
    text-indent: leading-units-to-em(1) // http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.2/
 
-address, article, aside, audio, blockquote, canvas, footer, header, hr, ol, ul, dl, pre, section, table, video 
+address, article, aside, audio, canvas, footer, header, hr, ol, ul, dl, pre, section, table, video 
    margin-top: leading-units-to-em(1) // 16px - http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/ 
    margin-bottom: leading-units-to-em(1) // 16px - http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/ 
+ 
+// http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.3/
+blockquote
+   margin: leading-units-to-em(1.5)
+   p
+      margin: 0
+      text-indent: 0
 
 h1 
    +adjust-rhythm(36px, 2)

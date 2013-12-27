@@ -16,9 +16,15 @@ p {
 p + p {
   text-indent: 1.5em; }
 
-address, article, aside, audio, blockquote, canvas, footer, header, hr, ol, ul, dl, pre, section, table, video {
+address, article, aside, audio, canvas, footer, header, hr, ol, ul, dl, pre, section, table, video {
   margin-top: 1.5em;
   margin-bottom: 1.5em; }
+
+blockquote {
+  margin: 2.25em; }
+  blockquote p {
+    margin: 0;
+    text-indent: 0; }
 
 h1 {
   font-size: 2.25em;
