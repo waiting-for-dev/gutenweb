@@ -1,16 +1,21 @@
-$leading: 24px !default
+// The root font size, this will be used for any element if any more specific rule applies
 $root-fs: 16px !default
 
-// http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/
-=adjust-leading($font-size, $leading-units)
-   font-size: $font-size/16px * 1em
-   line-height: ($leading-units*$leading)/$font-size
-   margin-top: $leading/$font-size * 1em
-   margin-bottom: $leading/$font-size * 1em
- 
+// The leading height, that's the vertical rythm
+$leading: 24px !default
+
+// Transform from leading units to em
 @function leading-units-to-em($leading-units, $relative-unit: $root-fs)
    @return ($leading-units*$leading)/$relative-unit * 1em
 
+// Adjust rhythm for an element, setting its font-size and leading-units to the supplied as arguments, and adding 1 leading unit after and before
+// http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/
+=adjust-rhythm($font-size, $leading-units)
+   font-size: $font-size/16px * 1em
+   line-height: leading-units-to-em($leading-units, $font-size)
+   margin-top: leading-units-to-em(1, $font-size)
+   margin-bottom: leading-units-to-em(1, $font-size)
+ 
 @import 'reset.css'
 
 html, :root
@@ -29,16 +34,16 @@ address, article, aside, audio, blockquote, canvas, footer, header, hr, ol, ul, 
    margin-bottom: leading-units-to-em(1) // 16px - http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/ 
 
 h1 
-   +adjust-leading(36px, 2)
+   +adjust-rhythm(36px, 2)
 
 h2 
-   +adjust-leading(24px, 1)
+   +adjust-rhythm(24px, 1)
 
 h3 
-   +adjust-leading(21px, 1)
+   +adjust-rhythm(21px, 1)
 
 h4 
-   +adjust-leading(18px, 1)
+   +adjust-rhythm(18px, 1)
 
 // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.6/ 
 abbr, .caps, .nums 
