@@ -8,7 +8,7 @@ body {
   padding: 0;
   font-size: 1em;
   line-height: 1.5em;
-  font-family: "Helvetica Neue", Arial, Freesans, clean, sans-serif;
+  font-family: "Computer Modern Roman", serif;
   text-align: left;
   word-spacing: normal;
   hyphens: auto;
@@ -61,15 +61,30 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   page-break-after: avoid; }
 
+abbr, .caps, .nums {
+  letter-spacing: 0.1em; }
+
+ul li {
+  list-style-type: disc; }
+
+ol li {
+  list-style-type: decimal; }
+
+dt {
+  font-weight: bold;
+  float: left;
+  margin-right: 1.5em; }
+
+li {
+  list-style-position: inside;
+  text-indent: 1.5em; }
+
 .note {
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-top: 1.71429em;
   margin-bottom: 1.71429em;
   text-indent: 0; }
-
-abbr, .caps, .nums {
-  letter-spacing: 0.1em; }
 
 .caps {
   font-variant-numeric: lining-nums; }
