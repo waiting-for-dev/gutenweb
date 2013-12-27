@@ -6,3 +6,24 @@ body {
 abbr, .caps, .nums {
    letter-spacing: 0.1em; /* http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.6/ */
 }
+
+.toc {
+   margin: 0 auto;
+}
+
+.toc th {
+   padding: 0 0.5em 0 0;
+   text-align: right;
+   font-weight: normal;
+}
+
+.toc td:before {
+   content: "\2022";
+   padding-right: 0.5em;
+}
+
+.toc td {
+   padding: 0;
+   text-align: left;
+   font-style: italic;
+}
