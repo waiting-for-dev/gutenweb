@@ -14,11 +14,12 @@ $leading: 24px !default
 
 // Adjust rhythm for an element, setting its font-size and leading-units to the supplied as arguments, and adding 1 leading unit after and before
 // http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/
-=adjust-rhythm($font-size, $line-height: 1, $margin-top: 1, $margin-bottom: 1, $relative-font-size: $root-fs)
-   font-size: px-to-em($font-size, $relative-font-size)
-   line-height: leading-units-to-em($line-height, $font-size)
-   margin-top: leading-units-to-em($margin-top, $font-size)
-   margin-bottom: leading-units-to-em($margin-bottom, $font-size)
+=adjust-rhythm($selector, $font-size, $line-height: 1, $margin-top: 1, $margin-bottom: 1, $relative-font-size: $root-fs)
+   #{$selector}
+      font-size: px-to-em($font-size, $relative-font-size)
+      line-height: leading-units-to-em($line-height, $font-size)
+      margin-top: leading-units-to-em($margin-top, $font-size)
+      margin-bottom: leading-units-to-em($margin-bottom, $font-size)
  
 @import 'reset.css'
 
@@ -59,17 +60,13 @@ blockquote
       margin: 0
       text-indent: 0
 
-h1 
-   +adjust-rhythm(36px, 2)
++adjust-rhythm(h1, 36px, 2)
 
-h2 
-   +adjust-rhythm(24px)
++adjust-rhythm(h2, 24px)
 
-h3 
-   +adjust-rhythm(21px)
++adjust-rhythm(h3, 21px)
 
-h4 
-   +adjust-rhythm(18px)
++adjust-rhythm(h4, 18px)
 
 h1, h2, h3, h4, h5, h6
    font-family: Georgia, serif
@@ -102,8 +99,9 @@ li
    text-indent: leading-units-to-em(1)
 
 .note
-   +adjust-rhythm(14px)
    text-indent: 0
+
++adjust-rhythm(".note", 14px)
 
 .caps
    font-variant-numeric: lining-nums // http://webtypography.net/Harmony_and_Counterpoint/Numerals__Capitals_and_Small_Caps/3.2.1/

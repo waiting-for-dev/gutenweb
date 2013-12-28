@@ -89,11 +89,13 @@ li {
   text-indent: 1.5em; }
 
 .note {
+  text-indent: 0; }
+
+.note {
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-top: 1.71429em;
-  margin-bottom: 1.71429em;
-  text-indent: 0; }
+  margin-bottom: 1.71429em; }
 
 .caps {
   font-variant-numeric: lining-nums; }
