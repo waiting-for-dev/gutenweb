@@ -70,6 +70,24 @@ blockquote
    p
       text-indent: 0
 
+code
+   font-family: monospace
+   padding: 0 0.3em
+
+// Block-level code, use with a pre
+.code
+   overflow: auto
+   scroll: auto
+   padding: 0 1em
+
+code, .code
+   background-color: #f8f8f8
+   outline: 0.1em solid #ddd
+
+.code code
+   outline: 0 none
+   padding: 0
+   
 h1, h2, h3, h4, h5, h6
    font-family: Georgia, serif
    font-weight: bold
@@ -141,6 +159,9 @@ li
       margin-right: leading-units-to-pt(1.5)
       p
          text-indent: 0
+
+   pre
+      white-space: pre-line
 
    dt
       margin-right: leading-units-to-pt(1)
