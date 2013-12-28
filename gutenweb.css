@@ -134,7 +134,8 @@ blockquote {
     text-indent: 0; }
 
 code {
-  font-family: monospace;
+  font-family: monospace, monospace;
+  vertical-align: top;
   padding: 0 0.3em; }
 
 .code {
