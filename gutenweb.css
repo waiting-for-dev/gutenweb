@@ -8,10 +8,20 @@ body {
   margin-top: 1.5em;
   margin-bottom: 1.5em; }
 
+@media print {
+  body {
+    font-size: 12pt;
+    line-height: 18pt;
+    margin-top: 18pt;
+    margin-bottom: 18pt; } }
 p {
   margin-top: 1.5em;
   margin-bottom: 0em; }
 
+@media print {
+  p {
+    margin-top: 18pt;
+    margin-bottom: 0pt; } }
 p + p {
   margin-top: 0em;
   margin-bottom: 0em; }
@@ -20,49 +30,91 @@ address, article, aside, audio, canvas, footer, header, hr, ol, ul, dl, pre, sec
   margin-top: 1.5em;
   margin-bottom: 1.5em; }
 
+@media print {
+  address, article, aside, audio, canvas, footer, header, hr, ol, ul, dl, pre, section, table, video {
+    margin-top: 18pt;
+    margin-bottom: 18pt; } }
 blockquote {
   margin-top: 2.25em;
   margin-bottom: 2.25em; }
 
+@media print {
+  blockquote {
+    margin-top: 27pt;
+    margin-bottom: 27pt; } }
 blockquote p {
   margin-top: 0em;
   margin-bottom: 0em; }
 
+@media print {
+  blockquote p {
+    margin-top: 0pt;
+    margin-bottom: 0pt; } }
 h1 {
   font-size: 2.25em;
   line-height: 1.33333em;
   margin-top: 0.66667em;
   margin-bottom: 0.66667em; }
 
+@media print {
+  h1 {
+    font-size: 21pt;
+    line-height: 36pt;
+    margin-top: 18pt;
+    margin-bottom: 18pt; } }
 h2 {
   font-size: 1.5em;
   line-height: 1em;
   margin-top: 1em;
   margin-bottom: 1em; }
 
+@media print {
+  h2 {
+    font-size: 18pt;
+    line-height: 18pt;
+    margin-top: 18pt;
+    margin-bottom: 18pt; } }
 h3 {
   font-size: 1.3125em;
   line-height: 1.14286em;
   margin-top: 1.14286em;
   margin-bottom: 1.14286em; }
 
+@media print {
+  h3 {
+    font-size: 16pt;
+    line-height: 18pt;
+    margin-top: 18pt;
+    margin-bottom: 18pt; } }
 h4 {
   font-size: 1.125em;
   line-height: 1.33333em;
   margin-top: 1.33333em;
   margin-bottom: 1.33333em; }
 
+@media print {
+  h4 {
+    font-size: 14pt;
+    line-height: 18pt;
+    margin-top: 18pt;
+    margin-bottom: 18pt; } }
 .note {
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-top: 1.71429em;
   margin-bottom: 1.71429em; }
 
+@media print {
+  .note {
+    font-size: 10pt;
+    line-height: 18pt;
+    margin-top: 18pt;
+    margin-bottom: 18pt; } }
 body {
   max-width: 33em;
   margin-left: auto;
   margin-right: auto;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: left;
   word-spacing: normal;
   hyphens: auto;
@@ -136,3 +188,22 @@ li {
     padding: 0;
     text-align: left;
     font-style: italic; }
+
+@media print {
+  body {
+    font-family: "Times New Roman", Times, serif; }
+
+  p + p {
+    text-indent: 18pt; }
+
+  blockquote {
+    margin-left: 27pt;
+    margin-right: 27pt; }
+    blockquote p {
+      text-indent: 0; }
+
+  dt {
+    margin-right: 18pt; }
+
+  li {
+    text-indent: 18pt; } }

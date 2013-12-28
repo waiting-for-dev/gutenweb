@@ -3,7 +3,13 @@
 // $leading-units amount of leadings (the $leading value)
 // $relative-fs the relative font size to convert $px
 @function leading-units-to-em($leading-units, $relative-fs: $root-fs)
-   @return ($leading-units*$leading)/$relative-fs * 1em
+   @return (($leading-units * $leading) / $relative-fs) * 1em
+
+// Transform from leading units (referred to $leading-print) to pt
+//
+// $leading-units amount of leadings (the $leading-print value)
+@function leading-units-to-pt($leading-units)
+   @return $leading-units * $leading-print
 
 // Transform from px units to em
 //
@@ -33,3 +39,23 @@
          line-height: leading-units-to-em($line-height, $font-size)
       margin-top: leading-units-to-em($margin-top, $font-size)
       margin-bottom: leading-units-to-em($margin-bottom, $font-size)
+
+// Adjust vertical rhythm in print media for elements that $selector matches
+// http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.1/
+// http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/
+// http://webtypography.net/Harmony_and_Counterpoint/Size/3.1.1/
+//
+// $selector CSS selector to apply the rules
+// $font-size the font-size in pt. If it is set no null the rule won't be specified (inheriting from parents)
+// $line-height the line-height in leading units referred to $leading-print. If it is set no null the rule won't be specified (inheriting from parents)
+// $margin-top the margin-top in leading units referred to $leading-print
+// $margin-bottom the margin-bottom in leading units referred to $leading-print
+=adjust-rhythm-print($selector, $font-size: $root-fs-print, $line-height: 1, $margin-top: 1, $margin-bottom: 1)
+   @media print
+      #{$selector}
+         @if $font-size
+            font-size: $font-size
+         @if $line-height
+            line-height: leading-units-to-pt($line-height)
+         margin-top: leading-units-to-pt($margin-top)
+         margin-bottom: leading-units-to-pt($margin-bottom)
