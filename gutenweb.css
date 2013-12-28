@@ -4,10 +4,8 @@ html, :root {
 
 body {
   max-width: 33em;
-  margin: 1.5em auto;
-  padding: 0;
-  font-size: 1em;
-  line-height: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
   font-family: Helvetica, Arial, sans-serif;
   text-align: left;
   word-spacing: normal;
@@ -17,6 +15,12 @@ body {
   font-variant-numeric: oldstyle-nums; }
   body * {
     max-width: 100%; }
+
+body {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em; }
 
 p {
   margin-top: 1.5em; }
