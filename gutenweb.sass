@@ -5,12 +5,18 @@ $root-fs: 16px !default
 $leading: 24px !default
 
 // Transform from leading units (referred to $leading) to em
-@function leading-units-to-em($leading-units, $relative-unit: $root-fs)
-   @return ($leading-units*$leading)/$relative-unit * 1em
+//
+// $leading-units amount of leadings (the $leading value)
+// $relative-fs the relative font size to convert $px
+@function leading-units-to-em($leading-units, $relative-fs: $root-fs)
+   @return ($leading-units*$leading)/$relative-fs * 1em
 
 // Transform from px units to em
-@function px-to-em($px, $relative-unit: $root-fs)
-   @return $px/$relative-unit * 1em
+//
+// $px the sixe in px
+// $relative-fs the relative font size to convert $px
+@function px-to-em($px, $relative-fs: $root-fs)
+   @return $px/$relative-fs * 1em
 
 // Adjust vertical rhythm for elements that $selector matches
 // http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.1/
@@ -22,11 +28,11 @@ $leading: 24px !default
 // $line-height the line-height in leading units referred to $leading. If it is set no null the rule won't be specified (inheriting from parents)
 // $margin-top the margin-top in leading units referred to $leading
 // $margin-bottom the margin-bottom in leading units referred to $leading
-// $relative-font-size the relative font-size in pixels relative to which $font-size will be converted to em
-=adjust-rhythm($selector, $font-size: $root-fs, $line-height: 1, $margin-top: 1, $margin-bottom: 1, $relative-font-size: $root-fs)
+// $relative-fs the relative font-size in pixels relative to which $font-size will be converted to em
+=adjust-rhythm($selector, $font-size: $root-fs, $line-height: 1, $margin-top: 1, $margin-bottom: 1, $relative-fs: $root-fs)
    #{$selector}
       @if $font-size
-         font-size: px-to-em($font-size, $relative-font-size)
+         font-size: px-to-em($font-size, $relative-fs)
       @else
          $font-size: $root-fs
       @if $line-height
