@@ -3,41 +3,30 @@ html, :root {
   font-size: 16px; }
 
 body {
-  max-width: 33em;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: Helvetica, Arial, sans-serif;
-  text-align: left;
-  word-spacing: normal;
-  hyphens: auto;
-  orphans: 2;
-  widows: 2;
-  font-variant-numeric: oldstyle-nums; }
-  body * {
-    max-width: 100%; }
-
-body {
   font-size: 1em;
   line-height: 1.5em;
   margin-top: 1.5em;
   margin-bottom: 1.5em; }
 
 p {
-  margin-top: 1.5em; }
+  margin-top: 1.5em;
+  margin-bottom: 0em; }
 
 p + p {
-  margin-top: 0;
-  text-indent: 1.5em; }
+  margin-top: 0em;
+  margin-bottom: 0em; }
 
 address, article, aside, audio, canvas, footer, header, hr, ol, ul, dl, pre, section, table, video {
   margin-top: 1.5em;
   margin-bottom: 1.5em; }
 
 blockquote {
-  margin: 2.25em; }
-  blockquote p {
-    margin: 0;
-    text-indent: 0; }
+  margin-top: 2.25em;
+  margin-bottom: 2.25em; }
+
+blockquote p {
+  margin-top: 0em;
+  margin-bottom: 0em; }
 
 h1 {
   font-size: 2.25em;
@@ -62,6 +51,35 @@ h4 {
   line-height: 1.33333em;
   margin-top: 1.33333em;
   margin-bottom: 1.33333em; }
+
+.note {
+  font-size: 0.875em;
+  line-height: 1.71429em;
+  margin-top: 1.71429em;
+  margin-bottom: 1.71429em; }
+
+body {
+  max-width: 33em;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: left;
+  word-spacing: normal;
+  hyphens: auto;
+  orphans: 2;
+  widows: 2;
+  font-variant-numeric: oldstyle-nums; }
+  body * {
+    max-width: 100%; }
+
+p + p {
+  text-indent: 1.5em; }
+
+blockquote {
+  margin-left: 2.25em;
+  margin-right: 2.25em; }
+  blockquote p {
+    text-indent: 0; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Georgia, serif;
@@ -94,12 +112,6 @@ li {
 
 .note {
   text-indent: 0; }
-
-.note {
-  font-size: 0.875em;
-  line-height: 1.71429em;
-  margin-top: 1.71429em;
-  margin-bottom: 1.71429em; }
 
 .caps {
   font-variant-numeric: lining-nums; }

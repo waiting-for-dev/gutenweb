@@ -14,10 +14,14 @@ $leading: 24px !default
 
 // Adjust rhythm for an element, setting its font-size and leading-units to the supplied as arguments, and adding 1 leading unit after and before
 // http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/
-=adjust-rhythm($selector, $font-size, $line-height: 1, $margin-top: 1, $margin-bottom: 1, $relative-font-size: $root-fs)
+=adjust-rhythm($selector, $font-size: $root-fs, $line-height: 1, $margin-top: 1, $margin-bottom: 1, $relative-font-size: $root-fs)
    #{$selector}
-      font-size: px-to-em($font-size, $relative-font-size)
-      line-height: leading-units-to-em($line-height, $font-size)
+      @if $font-size
+         font-size: px-to-em($font-size, $relative-font-size)
+      @else
+         $font-size: $root-fs
+      @if $line-height
+         line-height: leading-units-to-em($line-height, $font-size)
       margin-top: leading-units-to-em($margin-top, $font-size)
       margin-bottom: leading-units-to-em($margin-bottom, $font-size)
  
@@ -25,6 +29,19 @@ $leading: 24px !default
 
 html, :root
    font-size: $root-fs // Set document root font size
+
+// VERTICAL RHYTHM
++adjust-rhythm(body, 16px)
++adjust-rhythm(p, null, null, 1, 0)
++adjust-rhythm("p+p", null, null, 0, 0)
++adjust-rhythm("address, article, aside, audio, canvas, footer, header, hr, ol, ul, dl, pre, section, table, video", null, null, 1, 1)
++adjust-rhythm("blockquote", null, null, 1.5, 1.5)
++adjust-rhythm("blockquote p", null, null, 0, 0)
++adjust-rhythm(h1, 36px, 2)
++adjust-rhythm(h2, 24px)
++adjust-rhythm(h3, 21px)
++adjust-rhythm(h4, 18px)
++adjust-rhythm(".note", 14px)
 
 body
    max-width: 33em // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.2/
@@ -40,33 +57,14 @@ body
    *
       max-width: 100%
 
-+adjust-rhythm(body, 16px)
-
-p
-   margin-top: leading-units-to-em(1) // 16px - http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/ 
-  
 p+p
-   margin-top: 0
    text-indent: leading-units-to-em(1) // http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.2/
 
-address, article, aside, audio, canvas, footer, header, hr, ol, ul, dl, pre, section, table, video 
-   margin-top: leading-units-to-em(1) // 16px - http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/ 
-   margin-bottom: leading-units-to-em(1) // 16px - http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/ 
- 
-// http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.3/
 blockquote
-   margin: leading-units-to-em(1.5)
+   margin-left: leading-units-to-em(1.5)
+   margin-right: leading-units-to-em(1.5)
    p
-      margin: 0
       text-indent: 0
-
-+adjust-rhythm(h1, 36px, 2)
-
-+adjust-rhythm(h2, 24px)
-
-+adjust-rhythm(h3, 21px)
-
-+adjust-rhythm(h4, 18px)
 
 h1, h2, h3, h4, h5, h6
    font-family: Georgia, serif
@@ -100,8 +98,6 @@ li
 
 .note
    text-indent: 0
-
-+adjust-rhythm(".note", 14px)
 
 .caps
    font-variant-numeric: lining-nums // http://webtypography.net/Harmony_and_Counterpoint/Numerals__Capitals_and_Small_Caps/3.2.1/
