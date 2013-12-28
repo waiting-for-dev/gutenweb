@@ -14,11 +14,11 @@ $leading: 24px !default
 
 // Adjust rhythm for an element, setting its font-size and leading-units to the supplied as arguments, and adding 1 leading unit after and before
 // http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/
-=adjust-rhythm($font-size, $leading-units: 1)
-   font-size: px-to-em($font-size)
-   line-height: leading-units-to-em($leading-units, $font-size)
-   margin-top: leading-units-to-em(1, $font-size)
-   margin-bottom: leading-units-to-em(1, $font-size)
+=adjust-rhythm($font-size, $line-height: 1, $margin-top: 1, $margin-bottom: 1, $relative-font-size: $root-fs)
+   font-size: px-to-em($font-size, $relative-font-size)
+   line-height: leading-units-to-em($line-height, $font-size)
+   margin-top: leading-units-to-em($margin-top, $font-size)
+   margin-bottom: leading-units-to-em($margin-bottom, $font-size)
  
 @import 'reset.css'
 
