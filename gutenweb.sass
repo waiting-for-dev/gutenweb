@@ -31,8 +31,11 @@ html, :root
 
 +adjust-rhythm("p+p", null, null, 0, 0)
 
-+adjust-rhythm("address, article, aside, audio, canvas, footer, header, ol, ul, dl, pre, section, table, video", null, null, 1, 1)
-+adjust-rhythm-print("address, article, aside, audio, canvas, footer, header, ol, ul, dl, pre, section, table, video", null, null, 1, 1)
++adjust-rhythm("address, article, aside, audio, canvas, footer, header, ol, ul, dl, pre, section, table, video, img, figure", null, null, 1, 1)
++adjust-rhythm-print("address, article, aside, audio, canvas, footer, header, ol, ul, dl, pre, section, table, video, img, figure", null, null, 1, 1)
+
++adjust-rhythm("figcaption", 14px, 1, 0, 1)
++adjust-rhythm-print("figcaption", 10pt, 1, 0, 1)
 
 hr
   border-bottom: px-to-em(1px) solid #000
@@ -187,6 +190,18 @@ q:after
 
 dfn
   font-style: italic
+
+figure
+  text-align: center
+  img, audio, canvas, video, table
+    margin-top: 0
+    margin-bottom: 0
+
+figcaption
+  font-style: italic
+
+img
+  vertical-align: bottom
 
 sup, sub
   font-size: 70%
