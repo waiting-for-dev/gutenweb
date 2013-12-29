@@ -1,5 +1,7 @@
 @charset "UTF-8";
 @import url(reset.css);
+/* Gutenweb stylesheet - http://lamarciana.github.io/gutenweb/ */
+/* VERSION: 0.0.1 */
 html, :root {
   font-size: 16px; }
 
