@@ -134,8 +134,9 @@ blockquote {
     text-indent: 0; }
 
 code {
-  font-family: monospace, monospace;
-  vertical-align: top;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-size: 0.875em;
+  line-height: 0.875em;
   padding: 0 0.3em; }
 
 .code {
@@ -145,16 +146,18 @@ code {
 
 code, .code {
   background-color: #f8f8f8;
-  outline: 0.1em solid #dddddd; }
+  box-shadow: 0 0 0.1em 0.1em #dddddd; }
 
 .code code {
-  outline: 0 none;
+  box-shadow: none;
   padding: 0; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Georgia, serif;
   font-weight: bold;
   page-break-after: avoid; }
+  h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+    font-weight: normal; }
 
 em {
   font-style: italic; }
@@ -171,14 +174,14 @@ ul li {
 ol li {
   list-style-type: decimal; }
 
+li {
+  list-style-position: inside;
+  text-indent: 1.5em; }
+
 dt {
   font-weight: bold;
   float: left;
   margin-right: 1.5em; }
-
-li {
-  list-style-position: inside;
-  text-indent: 1.5em; }
 
 .note {
   text-indent: 0; }

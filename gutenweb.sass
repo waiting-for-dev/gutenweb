@@ -70,10 +70,10 @@ blockquote
    p
       text-indent: 0
 
-// http://alexmansfield.com/css/font-size-line-height-pre-code-monospace
 code
-   font-family: monospace, monospace
-   vertical-align: top
+   font-family: Consolas, "Liberation Mono", Courier, monospace
+   font-size: px-to-em(14px)
+   line-height: px-to-em(14px)
    padding: 0 0.3em
 
 // Block-level code, use with a pre
@@ -84,16 +84,18 @@ code
 
 code, .code
    background-color: #f8f8f8
-   outline: 0.1em solid #ddd
+   box-shadow: 0 0 0.1em 0.1em #ddd
 
 .code code
-   outline: 0 none
+   box-shadow: none
    padding: 0
    
 h1, h2, h3, h4, h5, h6
    font-family: Georgia, serif
    font-weight: bold
    page-break-after: avoid // http://webtypography.net/Rhythm_and_Proportion/Etiquette_of_Hyphenation_and_Pagination/2.4.8/
+   code
+      font-weight: normal
 
 em
    font-style: italic
@@ -111,14 +113,14 @@ ul li
 ol li
    list-style-type: decimal
 
+li
+   list-style-position: inside
+   text-indent: leading-units-to-em(1)
+
 dt
    font-weight: bold
    float: left
    margin-right: leading-units-to-em(1)
-
-li
-   list-style-position: inside
-   text-indent: leading-units-to-em(1)
 
 .note
    text-indent: 0
