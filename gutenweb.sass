@@ -16,7 +16,11 @@ html, :root
 
 // VERTICAL RHYTHM
 +adjust-rhythm(body, 16px)
-+adjust-rhythm-print(body, 12pt)
++adjust-rhythm-print(body, 12pt, 1, 0, 0)
+@media print
+  @page
+    margin-top: leading-units-to-pt(4)
+    margin-bottom: leading-units-to-pt(4)
 
 +adjust-rhythm(p, null, null, 1, 0)
 +adjust-rhythm-print(p, null, null, 1, 0)
