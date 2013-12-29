@@ -23,8 +23,13 @@ html, :root
 
 +adjust-rhythm("p+p", null, null, 0, 0)
 
-+adjust-rhythm("address, article, aside, audio, canvas, footer, header, hr, ol, ul, dl, pre, section, table, video", null, null, 1, 1)
-+adjust-rhythm-print("address, article, aside, audio, canvas, footer, header, hr, ol, ul, dl, pre, section, table, video", null, null, 1, 1)
++adjust-rhythm("address, article, aside, audio, canvas, footer, header, ol, ul, dl, pre, section, table, video", null, null, 1, 1)
++adjust-rhythm-print("address, article, aside, audio, canvas, footer, header, ol, ul, dl, pre, section, table, video", null, null, 1, 1)
+
+hr
+  border: px-to-em(1px) solid #000
+  margin-top: px-to-em($leading - 1px)
+  margin-bottom: px-to-em($leading - 1px)
 
 +adjust-rhythm("blockquote", null, null, 1.5, 1.5)
 +adjust-rhythm-print("blockquote", null, null, 1.5, 1.5)
@@ -82,9 +87,6 @@ code, samp, kbd, var
 mark
   background: #ff0
   color: #000
-
-hr
-  height: 0
 
 td, th
   outline: 0.1em solid #000 //box-sizing ignored in some browser

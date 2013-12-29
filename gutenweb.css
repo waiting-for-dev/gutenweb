@@ -26,14 +26,19 @@ p + p {
   margin-top: 0em;
   margin-bottom: 0em; }
 
-address, article, aside, audio, canvas, footer, header, hr, ol, ul, dl, pre, section, table, video {
+address, article, aside, audio, canvas, footer, header, ol, ul, dl, pre, section, table, video {
   margin-top: 1.5em;
   margin-bottom: 1.5em; }
 
 @media print {
-  address, article, aside, audio, canvas, footer, header, hr, ol, ul, dl, pre, section, table, video {
+  address, article, aside, audio, canvas, footer, header, ol, ul, dl, pre, section, table, video {
     margin-top: 18pt;
     margin-bottom: 18pt; } }
+hr {
+  border: 0.0625em solid black;
+  margin-top: 1.4375em;
+  margin-bottom: 1.4375em; }
+
 blockquote {
   margin-top: 2.25em;
   margin-bottom: 2.25em; }
@@ -145,9 +150,6 @@ code, samp, kbd, var {
 mark {
   background: yellow;
   color: black; }
-
-hr {
-  height: 0; }
 
 td, th {
   outline: 0.1em solid black;
