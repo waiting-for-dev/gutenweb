@@ -21,7 +21,9 @@ html
       p Just copy <code>reset.css</code> and <code>gutenweb.css</code> to your css folder and add a link to the last one:
       pre.code
         code #{'<link rel="stylesheet" href="gutenweb.css">'}
+
       h2 Special formats
+
       h3 <code>.toc</code> for table of contents
       p To create a table of contents, mark-up a table with <code>.toc</code> as its <code>class</code>. Put the section titles inside <code>#{'<th>'}</code> and its page numbers inside <code>#{'<td>'}</code>:
       p Example:
@@ -40,12 +42,19 @@ html
           <th>Section 1</th><td>3</td>
         tr
           <th>Section 2</th><td>6</td>
+
+
       h3 <code>.note</code> for notes
       p Example:
       pre.code
         code #{'<p class="note">I am small note</p>'}
       p Looks:
       p.note I am small note
+
+      h3 <code>.chapter</code> to force a page break
+      p Add <code>.chapter</code> class to force a page break, for example in a heading.
+      pre: code #{'<h2 class="chapter">New chapter</h2>'}
+
       h3 <code>.caps</code> and <code>.nums</code> for uppercase and numeric strings
       p Uppercase and numeric string usually deserve a small increase in its letter-spacing.
       p Example:
@@ -55,6 +64,7 @@ html
       p Looks:
       p: span.caps UPPERCASE STRING
       p: span.nums 936543476
+
       h3 <code>pre</code> with <code>.code</code> for block level code
       p For inline code, use simple <code>#{'<code>'}</code> tag. For block-level code, wrap it in a <code>#{'<pre>'}</code> tag with a <code>.code</code> class.
       p Example:
@@ -67,6 +77,7 @@ html
       p Looks:
       pre.code
         code #{'<p>Hello World!</p>'}
+
       h3 <code>.verse</code> for verses
       p Example:
       pre.code
@@ -77,20 +88,25 @@ html
       pre.verse Is not gutenweb
                 such a nice
                 stylesheet?
+
       h2 Common mark-up examples
+
       h3 Paragraph
       p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu euismod enim, et semper sapien. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam vitae tempus odio. Duis ac convallis sapien. In diam leo, molestie a elementum et, sollicitudin vitae sem. Sed vestibulum sem non risus interdum suscipit. Maecenas nec quam risus. Donec non ante malesuada diam porta tristique quis a risus. Nullam eleifend porta dui, ac imperdiet dolor lacinia dictum. Vivamus accumsan sagittis erat at porttitor. Praesent ut tortor accumsan, mollis libero id, varius arcu. Aliquam ipsum massa, bibendum eu tortor viverra, auctor luctus lorem. Nunc scelerisque sapien eu lorem tristique pharetra. Vestibulum sit amet ornare libero. Sed ac enim vulputate, molestie ipsum ut, elementum justo. Praesent suscipit tempus pulvinar.
       p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu euismod enim, et semper sapien. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam vitae tempus odio. Duis ac convallis sapien. In diam leo, molestie a elementum et, sollicitudin vitae sem.
+
       h3 Unordered list
       ul
         li Item 1
         li Item 2
         li Item 3
+
       h3 Ordered list
       ol
         li Item 1
         li Item 2
         li Item 3
+
       h3 Definition list
       dl
         dt Item 1
@@ -99,14 +115,18 @@ html
         dd This is item 2
         dt Item 3
         dd This is item 3
+
       h3 Blockquote
       blockquote
         p - Are you a blockquote?
         p - Yes, I am
+
       h3 Abbreviation
       p: abbr CIA
+
       h3 Emphasis and strong
       p <em>Emphasis</em> and <strong>strong</strong>.
+
       h3 Headings
       p Look at the headings of this document.
       h2 Internals
