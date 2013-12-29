@@ -136,6 +136,9 @@ blockquote {
 code, samp, kbd, var {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-size: 0.875em;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
   line-height: 0.875em;
   padding: 0 0.3em; }
 
@@ -156,8 +159,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Georgia, serif;
   font-weight: bold;
   page-break-after: avoid; }
-  h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
-    font-weight: normal; }
 
 .chapter {
   page-break-after: auto;
@@ -205,6 +206,15 @@ sup {
 
 sub {
   top: 0.5em; }
+
+i {
+  font-style: italic; }
+
+b {
+  font-weight: bold; }
+
+u {
+  text-decoration: underline; }
 
 .note {
   text-indent: 0; }
