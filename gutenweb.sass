@@ -44,8 +44,8 @@ html, :root
 +adjust-rhythm(h4, 18px)
 +adjust-rhythm-print(h4, 14pt)
 
-+adjust-rhythm(".note", 14px)
-+adjust-rhythm-print(".note", 10pt)
++adjust-rhythm(".note, small", 14px)
++adjust-rhythm-print(".note, small", 10pt)
 
 body
   max-width: 33em // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.2/
@@ -70,7 +70,7 @@ blockquote
   p
     text-indent: 0
 
-code, samp, kbd
+code, samp, kbd, var
   font-family: Consolas, "Liberation Mono", Courier, monospace
   font-size: px-to-em(14px)
   line-height: px-to-em(14px)
@@ -82,12 +82,12 @@ code, samp, kbd
   scroll: auto
   padding: 0 1em
 
-code, .code, samp, kbd
+code, .code, samp, kbd, var
   background-color: #f8f8f8
   box-shadow: 0 0 0.1em 0.1em #ddd
 
 .code
-  code, samp, kbd
+  code, samp, kbd, var
     box-shadow: none
     padding: 0
   
@@ -126,6 +126,26 @@ dt
   font-weight: bold
   float: left
   margin-right: leading-units-to-em(1)
+
+s
+  text-decoration: line-through
+
+cite, q
+  font-style: italic
+
+dfn
+  font-weight: bold
+
+sup, sub
+  font-size: 70%
+  position: relative
+
+sup
+  top: -0.5em
+
+sub
+  top: 0.5em
+
 
 .note
   text-indent: 0

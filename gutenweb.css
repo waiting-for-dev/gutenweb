@@ -98,14 +98,14 @@ h4 {
     line-height: 18pt;
     margin-top: 18pt;
     margin-bottom: 18pt; } }
-.note {
+.note, small {
   font-size: 0.875em;
   line-height: 1.71429em;
   margin-top: 1.71429em;
   margin-bottom: 1.71429em; }
 
 @media print {
-  .note {
+  .note, small {
     font-size: 10pt;
     line-height: 18pt;
     margin-top: 18pt;
@@ -133,7 +133,7 @@ blockquote {
   blockquote p {
     text-indent: 0; }
 
-code, samp, kbd {
+code, samp, kbd, var {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-size: 0.875em;
   line-height: 0.875em;
@@ -144,11 +144,11 @@ code, samp, kbd {
   scroll: auto;
   padding: 0 1em; }
 
-code, .code, samp, kbd {
+code, .code, samp, kbd, var {
   background-color: #f8f8f8;
   box-shadow: 0 0 0.1em 0.1em #dddddd; }
 
-.code code, .code samp, .code kbd {
+.code code, .code samp, .code kbd, .code var {
   box-shadow: none;
   padding: 0; }
 
@@ -186,6 +186,25 @@ dt {
   font-weight: bold;
   float: left;
   margin-right: 1.5em; }
+
+s {
+  text-decoration: line-through; }
+
+cite, q {
+  font-style: italic; }
+
+dfn {
+  font-weight: bold; }
+
+sup, sub {
+  font-size: 70%;
+  position: relative; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  top: 0.5em; }
 
 .note {
   text-indent: 0; }
