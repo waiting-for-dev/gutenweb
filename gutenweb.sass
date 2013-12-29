@@ -12,7 +12,7 @@ $leading-print: 18pt !default
 @import 'reset.css'
 
 html, :root
-   font-size: $root-fs // Set document root font size
+  font-size: $root-fs // Set document root font size
 
 // VERTICAL RHYTHM
 +adjust-rhythm(body, 16px)
@@ -48,127 +48,127 @@ html, :root
 +adjust-rhythm-print(".note", 10pt)
 
 body
-   max-width: 33em // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.2/
-   margin-left: auto
-   margin-right: auto
-   font-family: Helvetica, Arial, sans-serif
-   text-align: left // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.3/ 
-   word-spacing: normal // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.1/ 
-   hyphens: auto // http://webtypography.net/Rhythm_and_Proportion/Etiquette_of_Hyphenation_and_Pagination/2.4.1/
-   orphans: 2 // http://webtypography.net/Rhythm_and_Proportion/Etiquette_of_Hyphenation_and_Pagination/2.4.8/
-   widows: 2 // http://webtypography.net/Rhythm_and_Proportion/Etiquette_of_Hyphenation_and_Pagination/2.4.8/
-   font-variant-numeric: oldstyle-nums // http://webtypography.net/Harmony_and_Counterpoint/Numerals__Capitals_and_Small_Caps/3.2.1/
-   *
-      max-width: 100%
+  max-width: 33em // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.2/
+  margin-left: auto
+  margin-right: auto
+  font-family: Helvetica, Arial, sans-serif
+  text-align: left // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.3/ 
+  word-spacing: normal // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.1/ 
+  hyphens: auto // http://webtypography.net/Rhythm_and_Proportion/Etiquette_of_Hyphenation_and_Pagination/2.4.1/
+  orphans: 2 // http://webtypography.net/Rhythm_and_Proportion/Etiquette_of_Hyphenation_and_Pagination/2.4.8/
+  widows: 2 // http://webtypography.net/Rhythm_and_Proportion/Etiquette_of_Hyphenation_and_Pagination/2.4.8/
+  font-variant-numeric: oldstyle-nums // http://webtypography.net/Harmony_and_Counterpoint/Numerals__Capitals_and_Small_Caps/3.2.1/
+  *
+    max-width: 100%
 
 p+p
-   text-indent: leading-units-to-em(1) // http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.2/
+  text-indent: leading-units-to-em(1) // http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.2/
 
 blockquote
-   margin-left: leading-units-to-em(1.5)
-   margin-right: leading-units-to-em(1.5)
-   p
-      text-indent: 0
+  margin-left: leading-units-to-em(1.5)
+  margin-right: leading-units-to-em(1.5)
+  p
+    text-indent: 0
 
 code
-   font-family: Consolas, "Liberation Mono", Courier, monospace
-   font-size: px-to-em(14px)
-   line-height: px-to-em(14px)
-   padding: 0 0.3em
+  font-family: Consolas, "Liberation Mono", Courier, monospace
+  font-size: px-to-em(14px)
+  line-height: px-to-em(14px)
+  padding: 0 0.3em
 
 // Block-level code, use with a pre
 .code
-   overflow: auto
-   scroll: auto
-   padding: 0 1em
+  overflow: auto
+  scroll: auto
+  padding: 0 1em
 
 code, .code
-   background-color: #f8f8f8
-   box-shadow: 0 0 0.1em 0.1em #ddd
+  background-color: #f8f8f8
+  box-shadow: 0 0 0.1em 0.1em #ddd
 
 .code code
-   box-shadow: none
-   padding: 0
-   
+  box-shadow: none
+  padding: 0
+  
 h1, h2, h3, h4, h5, h6
-   font-family: Georgia, serif
-   font-weight: bold
-   page-break-after: avoid // http://webtypography.net/Rhythm_and_Proportion/Etiquette_of_Hyphenation_and_Pagination/2.4.8/
-   code
-      font-weight: normal
+  font-family: Georgia, serif
+  font-weight: bold
+  page-break-after: avoid // http://webtypography.net/Rhythm_and_Proportion/Etiquette_of_Hyphenation_and_Pagination/2.4.8/
+  code
+    font-weight: normal
 
 em
-   font-style: italic
+  font-style: italic
 
 strong
-   font-weight: bold
+  font-weight: bold
 
 // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.6/ 
 abbr, .caps, .nums 
-   letter-spacing: 0.1em
+  letter-spacing: 0.1em
 
 ul li
-   list-style-type: disc
+  list-style-type: disc
 
 ol li
-   list-style-type: decimal
+  list-style-type: decimal
 
 li
-   list-style-position: inside
-   text-indent: leading-units-to-em(1)
+  list-style-position: inside
+  text-indent: leading-units-to-em(1)
 
 dt
-   font-weight: bold
-   float: left
-   margin-right: leading-units-to-em(1)
+  font-weight: bold
+  float: left
+  margin-right: leading-units-to-em(1)
 
 .note
-   text-indent: 0
+  text-indent: 0
 
 .caps
-   font-variant-numeric: lining-nums // http://webtypography.net/Harmony_and_Counterpoint/Numerals__Capitals_and_Small_Caps/3.2.1/
+  font-variant-numeric: lining-nums // http://webtypography.net/Harmony_and_Counterpoint/Numerals__Capitals_and_Small_Caps/3.2.1/
 
 // http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.4/
 .verse
-   font-family: inherit
-   display: table
-   width: auto
-   margin-left: auto
-   margin-right: auto
+  font-family: inherit
+  display: table
+  width: auto
+  margin-left: auto
+  margin-right: auto
 
 // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.10/ 
 .toc
-   margin: 0 auto
-   th 
-      padding: 0 0.5em 0 0
-      text-align: right
-      font-weight: normal
-   td:before 
-      content: "\2022"
-      padding-right: 0.5em
-   td 
-      padding: 0
-      text-align: left
-      font-style: italic
+  margin: 0 auto
+  th 
+    padding: 0 0.5em 0 0
+    text-align: right
+    font-weight: normal
+  td:before 
+    content: "\2022"
+    padding-right: 0.5em
+  td 
+    padding: 0
+    text-align: left
+    font-style: italic
 
 @media print
-   body
-      font-family: "Times New Roman", Times, serif
+  body
+    font-family: "Times New Roman", Times, serif
 
-   p + p
-      text-indent: leading-units-to-pt(1)
+  p + p
+    text-indent: leading-units-to-pt(1)
 
-   blockquote
-      margin-left: leading-units-to-pt(1.5)
-      margin-right: leading-units-to-pt(1.5)
-      p
-         text-indent: 0
+  blockquote
+    margin-left: leading-units-to-pt(1.5)
+    margin-right: leading-units-to-pt(1.5)
+    p
+      text-indent: 0
 
-   pre
-      white-space: pre-line
+  pre
+    white-space: pre-line
 
-   dt
-      margin-right: leading-units-to-pt(1)
-   
-   li
-      text-indent: leading-units-to-pt(1)
+  dt
+    margin-right: leading-units-to-pt(1)
+  
+  li
+    text-indent: leading-units-to-pt(1)
