@@ -133,7 +133,7 @@ blockquote {
   blockquote p {
     text-indent: 0; }
 
-code {
+code, samp, kbd {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-size: 0.875em;
   line-height: 0.875em;
@@ -144,11 +144,11 @@ code {
   scroll: auto;
   padding: 0 1em; }
 
-code, .code {
+code, .code, samp, kbd {
   background-color: #f8f8f8;
   box-shadow: 0 0 0.1em 0.1em #dddddd; }
 
-.code code {
+.code code, .code samp, .code kbd {
   box-shadow: none;
   padding: 0; }
 
