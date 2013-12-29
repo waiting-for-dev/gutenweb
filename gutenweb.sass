@@ -27,9 +27,12 @@ html, :root
 +adjust-rhythm-print("address, article, aside, audio, canvas, footer, header, ol, ul, dl, pre, section, table, video", null, null, 1, 1)
 
 hr
-  border: px-to-em(1px) solid #000
+  border-bottom: px-to-em(1px) solid #000
+  border-top: 0 none
+  border-left: 0 none
+  border-right: 0 none
   margin-top: px-to-em($leading - 1px)
-  margin-bottom: px-to-em($leading - 1px)
+  margin-bottom: leading-to-em(1)
 
 +adjust-rhythm("blockquote", null, null, 1.5, 1.5)
 +adjust-rhythm-print("blockquote", null, null, 1.5, 1.5)

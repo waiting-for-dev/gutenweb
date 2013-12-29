@@ -35,9 +35,12 @@ address, article, aside, audio, canvas, footer, header, ol, ul, dl, pre, section
     margin-top: 18pt;
     margin-bottom: 18pt; } }
 hr {
-  border: 0.0625em solid black;
+  border-bottom: 0.0625em solid black;
+  border-top: 0 none;
+  border-left: 0 none;
+  border-right: 0 none;
   margin-top: 1.4375em;
-  margin-bottom: 1.4375em; }
+  margin-bottom: leading-to-em(1); }
 
 blockquote {
   margin-top: 2.25em;
