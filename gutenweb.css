@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(reset.css);
 html, :root {
   font-size: 16px; }
@@ -42,6 +43,10 @@ hr {
   margin-top: 1.4375em;
   margin-bottom: leading-to-em(1); }
 
+@media print hr {
+  border-bottom: 0.08333em solid black;
+  margin-top: 17pt;
+  margin-bottom: leading-to-pt(1); }
 blockquote {
   margin-top: 2.25em;
   margin-bottom: 2.25em; }
@@ -154,6 +159,10 @@ mark {
   background: yellow;
   color: black; }
 
+tr {
+  page-break-before: avoid;
+  page-break-after: avoid; }
+
 td, th {
   outline: 0.1em solid black;
   padding: 0 0.5em;
@@ -219,6 +228,15 @@ s {
 cite, q {
   font-style: italic; }
 
+q {
+  quotes: "“" "”" "‘" "’"; }
+
+q:before {
+  content: open-quote; }
+
+q:after {
+  content: close-quote; }
+
 dfn {
   font-weight: bold; }
 
@@ -258,7 +276,7 @@ u {
 .toc {
   margin: 0 auto; }
   .toc td, .toc th {
-    border: 0 none; }
+    outline: 0 none; }
   .toc th {
     padding: 0 0.5em 0 0;
     text-align: right;

@@ -34,6 +34,11 @@ hr
   margin-top: px-to-em($leading - 1px)
   margin-bottom: leading-to-em(1)
 
+@media print hr
+  border-bottom: px-to-em(1pt) solid #000
+  margin-top: $leading-print - 1
+  margin-bottom: leading-to-pt(1)
+
 +adjust-rhythm("blockquote", null, null, 1.5, 1.5)
 +adjust-rhythm-print("blockquote", null, null, 1.5, 1.5)
 
@@ -90,6 +95,10 @@ code, samp, kbd, var
 mark
   background: #ff0
   color: #000
+
+tr
+  page-break-before: avoid
+  page-break-after: avoid
 
 td, th
   outline: 0.1em solid #000 //box-sizing ignored in some browser
@@ -159,6 +168,15 @@ s
 cite, q
   font-style: italic
 
+q
+  quotes: "“" "”" "‘" "’"
+
+q:before
+  content: open-quote
+
+q:after
+  content: close-quote
+
 dfn
   font-weight: bold
 
@@ -200,7 +218,7 @@ u
 .toc
   margin: 0 auto
   td, th
-    border: 0 none
+    outline: 0 none
   th 
     padding: 0 0.5em 0 0
     text-align: right
