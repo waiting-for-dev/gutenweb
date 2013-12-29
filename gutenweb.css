@@ -146,6 +146,9 @@ mark {
   background: yellow;
   color: black; }
 
+hr {
+  height: 0; }
+
 .code {
   overflow: auto;
   scroll: auto;
