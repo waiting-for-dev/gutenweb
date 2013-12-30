@@ -13,6 +13,7 @@ $leading: 24px !default
 // The leading height in print media, that's the vertical rythm
 $leading-print: 18pt !default
 
+
 @import 'reset.css'
 
 html, :root
@@ -250,68 +251,4 @@ del
     text-align: left
     font-style: italic
 
-@media print
-  @page
-    margin-top: leading-units-to-pt(4)
-    margin-bottom: leading-units-to-pt(4)
-
-  // TAGS
-  body
-    +adjust-rhythm-print(12pt, 1, 0, 0)
-    font-family: "Times New Roman", Times, serif
-
-  p
-    +adjust-rhythm-print(null, null, 1, 0)
-
-  p + p
-    text-indent: leading-units-to-pt(1)
-
-  address, article, aside, audio, canvas, footer, header, ol, ul, dl, pre, section, table, video, img, figure
-    +adjust-rhythm-print(null, null, 1, 1)
-
-  h1
-    +adjust-rhythm-print(21pt, 2)
-
-  h2
-    +adjust-rhythm-print(18pt)
-
-  h3
-    +adjust-rhythm-print(16pt)
-
-  h4
-    +adjust-rhythm-print(14pt)
-
-  dt
-    margin-right: leading-units-to-pt(1)
-  
-  li
-    text-indent: leading-units-to-pt(1)
-
-  blockquote
-    +adjust-rhythm-print(null, null, 1.5, 1.5)
-    margin-left: leading-units-to-pt(1.5)
-    margin-right: leading-units-to-pt(1.5)
-    p
-      +adjust-rhythm(null, null, 0, 0)
-      text-indent: 0
-
-  figcaption
-    +adjust-rhythm-print(10pt, 1, 0, 1)
-
-  pre
-    white-space: pre-line
-
-  abbr[title]
-    border-bottom: 0 none
-
-  small
-    +adjust-rhythm-print(10pt)
-
-  hr
-    border-bottom: px-to-em(1pt) solid #000
-    margin-top: $leading-print - 1
-    margin-bottom: leading-to-pt(1)
-
-  // CLASSES
-  .note
-    +adjust-rhythm-print(10pt)
+@import 'print'
