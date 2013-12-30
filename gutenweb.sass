@@ -18,20 +18,7 @@ $leading-print: 18pt !default
 html, :root
   font-size: $root-fs // Set document root font size
 
-// VERTICAL RHYTHM
-hr
-  border-bottom: px-to-em(1px) solid #000
-  border-top: 0 none
-  border-left: 0 none
-  border-right: 0 none
-  margin-top: px-to-em($leading - 1px)
-  margin-bottom: leading-to-em(1)
-
-@media print hr
-  border-bottom: px-to-em(1pt) solid #000
-  margin-top: $leading-print - 1
-  margin-bottom: leading-to-pt(1)
-
+// TAGS
 body
   +adjust-rhythm(16px)
   max-width: 33em // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.2/
@@ -46,68 +33,16 @@ body
   font-variant-numeric: oldstyle-nums // http://webtypography.net/Harmony_and_Counterpoint/Numerals__Capitals_and_Small_Caps/3.2.1/
   *
     max-width: 100%
+
+address, article, aside, audio, canvas, footer, header, ol, ul, dl, pre, section, table, video, img, figure
+  +adjust-rhythm(null, null, 1, 1)
+
 p
   +adjust-rhythm(null, null, 1, 0)
 
 p+p
   +adjust-rhythm(null, null, 0, 0)
   text-indent: leading-units-to-em(1) // http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.2/
-
-address, article, aside, audio, canvas, footer, header, ol, ul, dl, pre, section, table, video, img, figure
-  +adjust-rhythm(null, null, 1, 1)
-
-blockquote
-  +adjust-rhythm(null, null, 1.5, 1.5)
-  margin-left: leading-units-to-em(1.5)
-  margin-right: leading-units-to-em(1.5)
-  p
-    +adjust-rhythm(null, null, 0, 0)
-    text-indent: 0
-
-code, samp, kbd, var
-  font-family: Consolas, "Liberation Mono", Courier, monospace
-  font-size: px-to-em(14px)
-  font-weight: normal
-  font-style: normal
-  text-decoration: none
-  line-height: px-to-em(14px)
-  padding: 0 0.3em
-
-mark
-  background: #ff0
-  color: #000
-
-tr
-  page-break-before: avoid
-  page-break-after: avoid
-
-td, th
-  outline: 0.1em solid #000 //a little bit ugly... box-sizing ignored, with border breaks rhythm
-  padding: 0 0.5em
-  text-align: left
-
-tfoot td
-  font-style: italic
-
-caption
-  font-style: italic
-  text-align: center
-  font-style: italic
-
-// Block-level code, use with a pre
-.code
-  overflow: auto
-  scroll: auto
-  padding: 0 1em
-
-code, .code, samp, kbd, var
-  background-color: #f8f8f8
-  box-shadow: 0 0 0.1em 0.1em #ddd
-
-.code
-  code, samp, kbd, var
-    box-shadow: none
-    padding: 0
 
 h1
   +adjust-rhythm(36px, 2)
@@ -126,23 +61,6 @@ h1, h2, h3, h4, h5, h6
   font-weight: bold
   page-break-after: avoid // http://webtypography.net/Rhythm_and_Proportion/Etiquette_of_Hyphenation_and_Pagination/2.4.8/
 
-.chapter
-  page-break-after: auto
-  page-break-before: always
-
-em
-  font-style: italic
-
-strong
-  font-weight: bold
-
-// http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.6/ 
-abbr, .caps, .nums 
-  letter-spacing: 0.1em
-
-abbr[title]
-  border-bottom: 1px dotted #000
-
 ul li
   list-style-type: disc
 
@@ -158,23 +76,30 @@ dt
   float: left
   margin-right: leading-units-to-em(1)
 
-s
-  text-decoration: line-through
+tr
+  page-break-before: avoid
+  page-break-after: avoid
 
-cite, q
+td, th
+  outline: 0.1em solid #000 //a little bit ugly... box-sizing ignored, with border breaks rhythm
+  padding: 0 0.5em
+  text-align: left
+
+tfoot td
   font-style: italic
 
-q
-  quotes: "“" "”" "‘" "’"
-
-q:before
-  content: open-quote
-
-q:after
-  content: close-quote
-
-dfn
+caption
   font-style: italic
+  text-align: center
+  font-style: italic
+
+blockquote
+  +adjust-rhythm(null, null, 1.5, 1.5)
+  margin-left: leading-units-to-em(1.5)
+  margin-right: leading-units-to-em(1.5)
+  p
+    +adjust-rhythm(null, null, 0, 0)
+    text-indent: 0
 
 figure
   text-align: center
@@ -189,6 +114,50 @@ figcaption
 img
   vertical-align: bottom
 
+code, samp, kbd, var
+  font-family: Consolas, "Liberation Mono", Courier, monospace
+  font-size: px-to-em(14px)
+  font-weight: normal
+  font-style: normal
+  text-decoration: none
+  line-height: px-to-em(14px)
+  padding: 0 0.3em
+
+mark
+  background: #ff0
+  color: #000
+
+code, .code, samp, kbd, var
+  background-color: #f8f8f8
+  box-shadow: 0 0 0.1em 0.1em #ddd
+
+em
+  font-style: italic
+
+strong
+  font-weight: bold
+
+// http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.6/ 
+abbr 
+  letter-spacing: 0.1em
+
+abbr[title]
+  border-bottom: 1px dotted #000
+
+cite, q
+  font-style: italic
+
+q
+  font-style: italic
+  quotes: "“" "”" "‘" "’"
+  &:before
+    content: open-quote
+  &:after
+    content: close-quote
+
+dfn
+  font-style: italic
+
 sup, sub
   font-size: 70%
   line-height: 70%
@@ -200,6 +169,17 @@ sup
 sub
   top: 0.5em
 
+hr
+  border-bottom: px-to-em(1px) solid #000
+  border-top: 0 none
+  border-left: 0 none
+  border-right: 0 none
+  margin-top: px-to-em($leading - 1px)
+  margin-bottom: leading-to-em(1)
+
+small
+  +adjust-rhythm(14px)
+
 i
   font-style: italic
 
@@ -209,6 +189,9 @@ b
 u
   text-decoration: underline
 
+s
+  text-decoration: line-through
+
 ins
   font-weight: bold
   text-decoration: underline
@@ -216,10 +199,27 @@ ins
 del
   text-decoration: line-through
 
+// CLASSES
+.caps, .nums
+  letter-spacing: 0.1em
+
+//Block-level code, use with a pre
+.code
+  overflow: auto
+  scroll: auto
+  padding: 0 1em
+  background-color: #f8f8f8
+  box-shadow: 0 0 0.1em 0.1em #ddd
+  code, samp, kbd, var
+    box-shadow: none
+    padding: 0
+
+.chapter
+  page-break-after: auto
+  page-break-before: always
+
 .note
   text-indent: 0
-
-.note, small
   +adjust-rhythm(14px)
 
 .caps
@@ -255,6 +255,7 @@ del
     margin-top: leading-units-to-pt(4)
     margin-bottom: leading-units-to-pt(4)
 
+  // TAGS
   body
     +adjust-rhythm-print(12pt, 1, 0, 0)
     font-family: "Times New Roman", Times, serif
@@ -262,22 +263,11 @@ del
   p
     +adjust-rhythm-print(null, null, 1, 0)
 
-  address, article, aside, audio, canvas, footer, header, ol, ul, dl, pre, section, table, video, img, figure
-    +adjust-rhythm-print(null, null, 1, 1)
-
-  figcaption
-    +adjust-rhythm-print(10pt, 1, 0, 1)
-
   p + p
     text-indent: leading-units-to-pt(1)
 
-  blockquote
-    +adjust-rhythm-print(null, null, 1.5, 1.5)
-    margin-left: leading-units-to-pt(1.5)
-    margin-right: leading-units-to-pt(1.5)
-    p
-      +adjust-rhythm(null, null, 0, 0)
-      text-indent: 0
+  address, article, aside, audio, canvas, footer, header, ol, ul, dl, pre, section, table, video, img, figure
+    +adjust-rhythm-print(null, null, 1, 1)
 
   h1
     +adjust-rhythm-print(21pt, 2)
@@ -291,14 +281,34 @@ del
   h4
     +adjust-rhythm-print(14pt)
 
-  .note, small
-    +adjust-rhythm-print(10pt)
-
-  pre
-    white-space: pre-line
-
   dt
     margin-right: leading-units-to-pt(1)
   
   li
     text-indent: leading-units-to-pt(1)
+
+  blockquote
+    +adjust-rhythm-print(null, null, 1.5, 1.5)
+    margin-left: leading-units-to-pt(1.5)
+    margin-right: leading-units-to-pt(1.5)
+    p
+      +adjust-rhythm(null, null, 0, 0)
+      text-indent: 0
+
+  figcaption
+    +adjust-rhythm-print(10pt, 1, 0, 1)
+
+  pre
+    white-space: pre-line
+
+  small
+    +adjust-rhythm-print(10pt)
+
+  hr
+    border-bottom: px-to-em(1pt) solid #000
+    margin-top: $leading-print - 1
+    margin-bottom: leading-to-pt(1)
+
+  // CLASSES
+  .note
+    +adjust-rhythm-print(10pt)
