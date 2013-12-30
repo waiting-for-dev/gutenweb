@@ -13,9 +13,9 @@ html
    body
       h1 Gutenweb
       p Gutenweb is a typographical stylesheet. It is a CSS file ready to use for quick document generation in html (and epub).
-      p Gutenweb aims to forgot styling when marking-up a document, as you do when you generate a document in LaTeX. It is suitable for not too complex documents
+      p Gutenweb aims to forgot styling when marking-up a document, as you do when you generate a document in LaTeX. It is suitable for not too complex documents.
       p It adds some default styles which prioritize readability and they adapt to screen or print media. A lot of the concepts are taken from <a href="http://webtypography.net/">The Elements of Typographic Style Applied to the Web</a>.
-      p This web page is using Gutenweb (plus, if your rendering engine supports it, background strips to show the vertical rhythm used), so you are right know seeing the look&amp;feel generated. Print to a PDF to look at the print version.
+      p This web page is using Gutenweb (plus, if your rendering engine supports it, background strips to show the vertical rhythm used), so you are right know seeing the look&amp;feel generated. Print to a PDF to look at the paper version.
       h2 Setup
       p Get a copy in the <a href="https://github.com/laMarciana/gutenweb">official repository</a> or <a href="https://github.com/laMarciana/gutenweb/archive/master.zip">download the zip</a>.
       p Just copy <code>reset.css</code> and <code>gutenweb.css</code> to your css folder and add a link to the last one:
@@ -47,16 +47,16 @@ html
       h3 <code>.note</code> for notes
       p Example:
       pre.code
-        code #{'<p class="note">I am small note</p>'}
+        code #{'<p class="note">I am a small note</p>'}
       p Looks:
-      p.note I am small note
+      p.note I am a small note
 
       h3 <code>.chapter</code> to force a page break
       p Add <code>.chapter</code> class to force a page break, for example in a heading.
       pre: code #{'<h2 class="chapter">New chapter</h2>'}
 
       h3 <code>.caps</code> and <code>.nums</code> for uppercase and numeric strings
-      p Uppercase and numeric string usually deserve a small increase in its letter-spacing.
+      p Uppercase and numeric strings usually deserve a small increase in its letter-spacing.
       p Example:
       pre.code
         code #{'<p><span class="caps">UPPERCASE STRING</span></p>'}
@@ -85,7 +85,7 @@ html
              #{'such a nice'}
              #{'stylesheet?</pre>'}
       p Looks:
-      pre.verse Is not gutenweb
+      pre.verse Is not Gutenweb
                 such a nice
                 stylesheet?
 
@@ -152,7 +152,7 @@ html
       p <em>Emphasis</em> and <strong>strong</strong>.
 
       h3 Code, samples, variables and inputs:  <code>#{'<code>'}</code>,  <code>#{'<samp>'}</code>,  <code>#{'<var>'}</code> and  <code>#{'<kbd>'}</code>
-      p <code>This is code</code>, <samp>this is sample</samp>, <var>this is a variable</var> and <kbd>this is keyboard input</kbd>. Right now all of theme looks the same.
+      p <code>This is code</code>, <samp>this is sample</samp>, <var>this is a variable</var> and <kbd>this is keyboard input</kbd>. Right now all of them looks the same.
 
       h3 Small:  <code>#{'<small>'}</code>
       p: small This is small
@@ -164,7 +164,7 @@ html
       p: cite This is a cite
 
       h3 Inline quotation: <code>#{'<q>'}</code>
-      p <q> This is an inline quotation with a <q>nested quotation</q></q>. You are encouraged to replace the quotations mark used for those of the language used in your document.
+      p <q> This is an inline quotation with a <q>nested quotation</q></q>. You are encouraged to replace default quotation marks for those of the language used in your document.
 
       h3 Definition: <code>#{'<dfn>'}</code>
       p <dfn>The definition</dfn> is given here.
@@ -185,13 +185,13 @@ html
       hr
 
       h2 Internals
-      p The styleshhet is written in <a href="http://sass-lang.com/">Sass</a> and compiled to CSS. The main file is <code>sass/gutenweb.sass</code>, which use <code>sass/_print.sass</code>, where there are print styles, and the helper file <code>sass/_helper.sass</code>, where there are some usefull functions and mixins.
+      p The stylesheet is written in <a href="http://sass-lang.com/">Sass</a> and compiled to CSS. The main file is <code>sass/gutenweb.sass</code>, which use <code>sass/_print.sass</code>, where there are print styles, and the helper file <code>sass/_helper.sass</code>, where there are some usefull functions and mixins.
       p <a href="http://meyerweb.com/eric/tools/css/reset/">Eric Meyer reset stylesheet</a> is used to avoid problems with default rendering engines styles.
       p This page is written with <a href="http://slim-lang.com/">slim template language</a> (the <code>index.html.slim</code> file) and compiled to html (the <code>index.html</code> file).
 
       h2 Release Policy and version notes
-      p Gutenweb uses <a href="http://semver.org/">semantic versioning system</a>. Now it is still in initial development.
-      p It is sure that there are some common mark-up pattern that it is not covered. Please, <a href="https://github.com/laMarciana/gutenweb/issues">open an issue</a> for any error or improvement you can suggest. It will be added it as soon as possible.
+      p Gutenweb uses <a href="http://semver.org/">semantic versioning system</a>. Now it is still at initial development.
+      p It is sure that there are some common mark-up pattern that it is not covered. Please, <a href="https://github.com/laMarciana/gutenweb/issues">open an issue</a> for any error or improvement you can suggest. It will be added as soon as possible.
 
       h2 Copyright
       p.author Copyright 2013, Marc Busqué Pérez, under GNU LESSER GENERAL PUBLIC LICENSE
