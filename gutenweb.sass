@@ -191,10 +191,15 @@ del
   text-decoration: line-through
 
 // CLASSES
+// http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.6/ 
 .caps, .nums
   letter-spacing: 0.1em
 
-//Block-level code, use with a pre
+// http://webtypography.net/Harmony_and_Counterpoint/Numerals__Capitals_and_Small_Caps/3.2.1/
+.caps
+  font-variant-numeric: lining-nums
+
+// Block-level code, use with a pre
 .code
   overflow: auto
   scroll: auto
@@ -212,9 +217,6 @@ del
 .note
   text-indent: 0
   +adjust-rhythm(14px)
-
-.caps
-  font-variant-numeric: lining-nums // http://webtypography.net/Harmony_and_Counterpoint/Numerals__Capitals_and_Small_Caps/3.2.1/
 
 // http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.4/
 .verse
