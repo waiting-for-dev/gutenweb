@@ -19,24 +19,6 @@ html, :root
   font-size: $root-fs // Set document root font size
 
 // VERTICAL RHYTHM
-+adjust-rhythm(body, 16px)
-+adjust-rhythm-print(body, 12pt, 1, 0, 0)
-@media print
-  @page
-    margin-top: leading-units-to-pt(4)
-    margin-bottom: leading-units-to-pt(4)
-
-+adjust-rhythm(p, null, null, 1, 0)
-+adjust-rhythm-print(p, null, null, 1, 0)
-
-+adjust-rhythm("p+p", null, null, 0, 0)
-
-+adjust-rhythm("address, article, aside, audio, canvas, footer, header, ol, ul, dl, pre, section, table, video, img, figure", null, null, 1, 1)
-+adjust-rhythm-print("address, article, aside, audio, canvas, footer, header, ol, ul, dl, pre, section, table, video, img, figure", null, null, 1, 1)
-
-+adjust-rhythm("figcaption", 14px, 1, 0, 1)
-+adjust-rhythm-print("figcaption", 10pt, 1, 0, 1)
-
 hr
   border-bottom: px-to-em(1px) solid #000
   border-top: 0 none
@@ -50,28 +32,8 @@ hr
   margin-top: $leading-print - 1
   margin-bottom: leading-to-pt(1)
 
-+adjust-rhythm("blockquote", null, null, 1.5, 1.5)
-+adjust-rhythm-print("blockquote", null, null, 1.5, 1.5)
-
-+adjust-rhythm("blockquote p", null, null, 0, 0)
-+adjust-rhythm-print("blockquote p", null, null, 0, 0)
-
-+adjust-rhythm(h1, 36px, 2)
-+adjust-rhythm-print(h1, 21pt, 2)
-
-+adjust-rhythm(h2, 24px)
-+adjust-rhythm-print(h2, 18pt)
-
-+adjust-rhythm(h3, 21px)
-+adjust-rhythm-print(h3, 16pt)
-
-+adjust-rhythm(h4, 18px)
-+adjust-rhythm-print(h4, 14pt)
-
-+adjust-rhythm(".note, small", 14px)
-+adjust-rhythm-print(".note, small", 10pt)
-
 body
+  +adjust-rhythm(16px)
   max-width: 33em // http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.2/
   margin-left: auto
   margin-right: auto
@@ -84,14 +46,22 @@ body
   font-variant-numeric: oldstyle-nums // http://webtypography.net/Harmony_and_Counterpoint/Numerals__Capitals_and_Small_Caps/3.2.1/
   *
     max-width: 100%
+p
+  +adjust-rhythm(null, null, 1, 0)
 
 p+p
+  +adjust-rhythm(null, null, 0, 0)
   text-indent: leading-units-to-em(1) // http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.2/
 
+address, article, aside, audio, canvas, footer, header, ol, ul, dl, pre, section, table, video, img, figure
+  +adjust-rhythm(null, null, 1, 1)
+
 blockquote
+  +adjust-rhythm(null, null, 1.5, 1.5)
   margin-left: leading-units-to-em(1.5)
   margin-right: leading-units-to-em(1.5)
   p
+    +adjust-rhythm(null, null, 0, 0)
     text-indent: 0
 
 code, samp, kbd, var
@@ -138,6 +108,18 @@ code, .code, samp, kbd, var
   code, samp, kbd, var
     box-shadow: none
     padding: 0
+
+h1
+  +adjust-rhythm(36px, 2)
+
+h2
+  +adjust-rhythm(24px)
+
+h3
+  +adjust-rhythm(21px)
+
+h4
+  +adjust-rhythm(18px)
   
 h1, h2, h3, h4, h5, h6
   font-family: Georgia, serif
@@ -201,6 +183,7 @@ figure
     margin-bottom: 0
 
 figcaption
+  +adjust-rhythm(14px, 1, 0, 1)
   font-style: italic
 
 img
@@ -236,6 +219,9 @@ del
 .note
   text-indent: 0
 
+.note, small
+  +adjust-rhythm(14px)
+
 .caps
   font-variant-numeric: lining-nums // http://webtypography.net/Harmony_and_Counterpoint/Numerals__Capitals_and_Small_Caps/3.2.1/
 
@@ -265,17 +251,48 @@ del
     font-style: italic
 
 @media print
+  @page
+    margin-top: leading-units-to-pt(4)
+    margin-bottom: leading-units-to-pt(4)
+
   body
+    +adjust-rhythm-print(12pt, 1, 0, 0)
     font-family: "Times New Roman", Times, serif
+
+  p
+    +adjust-rhythm-print(null, null, 1, 0)
+
+  address, article, aside, audio, canvas, footer, header, ol, ul, dl, pre, section, table, video, img, figure
+    +adjust-rhythm-print(null, null, 1, 1)
+
+  figcaption
+    +adjust-rhythm-print(10pt, 1, 0, 1)
 
   p + p
     text-indent: leading-units-to-pt(1)
 
   blockquote
+    +adjust-rhythm-print(null, null, 1.5, 1.5)
     margin-left: leading-units-to-pt(1.5)
     margin-right: leading-units-to-pt(1.5)
     p
+      +adjust-rhythm(null, null, 0, 0)
       text-indent: 0
+
+  h1
+    +adjust-rhythm-print(21pt, 2)
+
+  h2
+    +adjust-rhythm-print(18pt)
+
+  h3
+    +adjust-rhythm-print(16pt)
+
+  h4
+    +adjust-rhythm-print(14pt)
+
+  .note, small
+    +adjust-rhythm-print(10pt)
 
   pre
     white-space: pre-line
