@@ -3,7 +3,7 @@ html lang="en"
    head
       meta charset="UTF-8"
       title Gutenweb, a typographical stylesheet
-      link rel="stylesheet" href="gutenweb.css"
+      link rel="stylesheet" href="../dist/gutenweb.css"
       css:
          body {
             background-size: auto 24px;
@@ -18,7 +18,7 @@ html lang="en"
       p This web page is using Gutenweb (plus, if your rendering engine supports it, background strips to show the vertical rhythm used), so you are right know seeing the look&amp;feel generated. Print to a PDF to look at the paper version.
       h2 Setup
       p Get a copy in the <a href="https://github.com/laMarciana/gutenweb">official repository</a> or <a href="https://github.com/laMarciana/gutenweb/archive/master.zip">download the zip</a>.
-      p Just copy <code>reset.css</code> and <code>gutenweb.css</code> to your css folder and add a link to the last one:
+      p Just copy <code>dist/gutenweb.css</code> to your css folder and add a link to it:
       pre.code
         code #{'<link rel="stylesheet" href="gutenweb.css">'}
 
@@ -185,9 +185,9 @@ html lang="en"
       hr
 
       h2 Internals
-      p The stylesheet is written in <a href="http://sass-lang.com/">Sass</a> and compiled to CSS. The main file is <code>sass/gutenweb.sass</code>, which use <code>sass/_print.sass</code>, where there are print styles, and the helper file <code>sass/_helper.sass</code>, where there are some usefull functions and mixins.
-      p <a href="http://meyerweb.com/eric/tools/css/reset/">Eric Meyer reset stylesheet</a> is used to avoid problems with default rendering engines styles.
-      p This page is written with <a href="http://slim-lang.com/">slim template language</a> (the <code>index.html.slim</code> file) and compiled to html (the <code>index.html</code> file).
+      p The stylesheet is written in <a href="http://sass-lang.com/">Sass</a> and compiled to CSS. The main file is <code>src/gutenweb.sass</code>, which use <code>src/_print.sass</code>, where there are print styles, and the helper file <code>src/_helper.sass</code>, where there are some usefull functions and mixins.
+      p <a href="http://meyerweb.com/eric/tools/css/reset/">Eric Meyer reset stylesheet</a> is also used to avoid problems with default rendering engines styles.
+      p This page is written with <a href="http://slim-lang.com/">slim template language</a> (the <code>examples/index.html.slim</code> file) and compiled to html (the <code>examples/index.html</code> file).
 
       h2 Release Policy and version notes
       p Gutenweb uses <a href="http://semver.org/">semantic versioning system</a>. Now it is still at initial development.
